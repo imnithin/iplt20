@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  team1: 1
+  team2: 1
+  venue: MyString
+  start_time: 2015-04-14 18:54:45
+  date: 2015-04-14 18:54:45
+
+two:
+  team1: 1
+  team2: 1
+  venue: MyString
+  start_time: 2015-04-14 18:54:45
+  date: 2015-04-14 18:54:45

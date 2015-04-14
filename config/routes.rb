@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :matches
+  resources :statistics
+  resources :players
+  resources :teams
+  resources :groups
   get 'welcome/index'
   root 'welcome#index'
 

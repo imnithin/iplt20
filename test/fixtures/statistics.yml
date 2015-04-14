@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  runs: 1
+  wickets: 1
+
+two:
+  runs: 1
+  wickets: 1
