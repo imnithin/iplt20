@@ -8,7 +8,7 @@ class CreatePlayers < ActiveRecord::Migration
 
       t.timestamps null: false
     end
-    add_index :players, :first_name, unique: true
-    add_index :players, :last_name, unique: true
+    add_index :players, :first_name
+    add_index :players, :last_name
   end
 end

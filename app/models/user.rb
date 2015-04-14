@@ -6,5 +6,8 @@ class User < ActiveRecord::Base
 
   has_many :groups, through: :user_groups
   has_many :user_groups
+
+  has_many :matches, through: :user_matches
+  has_many :user_matches
   
 end
