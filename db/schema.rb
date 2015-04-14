@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150414132445) do
+ActiveRecord::Schema.define(version: 20150414151630) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,8 +42,8 @@ ActiveRecord::Schema.define(version: 20150414132445) do
     t.datetime "updated_at", null: false
   end
 
-  add_index "players", ["first_name"], name: "index_players_on_first_name", unique: true, using: :btree
-  add_index "players", ["last_name"], name: "index_players_on_last_name", unique: true, using: :btree
+  add_index "players", ["first_name"], name: "index_players_on_first_name", using: :btree
+  add_index "players", ["last_name"], name: "index_players_on_last_name", using: :btree
 
   create_table "statistics", force: :cascade do |t|
     t.integer  "runs"
@@ -62,6 +62,13 @@ ActiveRecord::Schema.define(version: 20150414132445) do
   create_table "user_groups", force: :cascade do |t|
     t.integer  "user_id",    null: false
     t.integer  "group_id",   null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "user_matches", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "match_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
