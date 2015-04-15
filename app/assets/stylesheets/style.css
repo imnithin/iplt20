@@ -1,0 +1,126 @@
+body{
+	
+	font-size: 16px;
+	}
+/*login*/
+#login-main{ 
+	background: url('http://i60.tinypic.com/30tnko9.jpg'); 
+	height: 100%; 
+	background-size: cover; 
+	position: fixed; 
+	width: 100%;
+ 	background-position-y: 100%; 
+ 	overflow-y: scroll;
+  }
+#login-main .login-main { text-align: center; padding-top: 90px; }
+#login-main .login-main #logo { cursor: pointer; }
+#login-main .login-main .user-img{margin-top:20px; float: none!important;}
+#login-main .login-main .img-thumbnail{background:#838186; border: #838186}
+#login-main .login-main .login-form, 
+.signup-form { 
+		float: none; 
+		margin: 30px auto; 
+	}
+#login-main .login-main .login-form .form-group .login-name,
+#login-main .login-main .signup-form .form-group .signup-name{ 
+	color: #a3a3a3; 
+	font-size: 16px; 
+	position: absolute; 
+	right: 15px; 
+	top: 10px; 
+	-webkit-transition: 0.25s; 
+	transition: 0.25s; 
+}
+.signup-form{
+	display: none;
+}
+.signup-form .form-group,
+.login-form .form-group{
+	position: relative;
+}
+.signuplink{
+	width: 65px;	
+}
+.linkwdt{
+	width: 50%;
+	float: left;
+}
+#login-main .login-main .login-form .form-group .login-pass,
+.signup-pass { 
+	color: #a3a3a3; 
+	font-size: 16px; 
+	position: absolute; right: 15px; 
+	top: 10px; 
+	-webkit-transition: 
+	0.25s; transition: 0.25s; 
+}
+
+#login-main .login-main .form-control{ height: 45px; padding-right: 35px;}
+#login-main input { color: #a3a3a3; }
+#login-main input:placeholder { color: #a3a3a3; }
+#login-main input[type=password] { font-weight: bold; font-size: 27px; color: #a3a3a3; }
+#login-main .btn-block { background: #ea6153; border: none; color: white; border-radius:3px; }
+#login-main .btn-block:hover { background: #e9796e; }
+#login-main .login-link{ color:#fff!important; display: block; text-align: left; font-weight: 600}
+#login-main .login-link:hover { color: white; }
+
+.login-main{
+ animation: fadeInUp 0.7s;
+-webkit-animation: fadeInUp 0.7s;
+-moz-animation: fadeInUp 0.7s;
+-o-animation: fadeInUp 0.7s;}
+
+
+.input-check{text-align: left; margin-bottom:5px!important;}
+.input-check span{color:#fff; font-weight: 600!important; font-size: 13px; padding-top:2px; vertical-align: -2px}
+.input-check label{cursor:pointer;}
+input[type=radio], input[type=checkbox] {display:none;}
+
+input[type=radio] + label:before {
+content: "";  
+display: inline-block;  
+width: 17px;  
+height: 17px;  
+vertical-align:middle;
+margin-right: 8px;  
+background-color: #fff;  
+box-shadow: inset 0px 2px 2px rgba(0, 0, 0, .3);
+border-radius: 8px; } 
+
+input[type=checkbox] + label:before {
+content: "";  
+display: inline-block;  
+width: 17px;  
+height: 17px;    
+vertical-align:middle;
+margin-right: 8px;  
+background-color: #fff;  
+border-radius: 3px;  }
+
+input[type=radio]:checked + label:before {
+content: "\2022";
+color:#373d49;
+background-color: #fff; 
+font-size:1.8em;
+text-align:center;
+line-height:14px;}
+
+input[type=checkbox]:checked + label:before {
+font-family: FontAwesome;
+content:"\f00c";
+color:#373d49;
+background-color: #fff; 
+text-align:center;
+line-height:18px;}
+
+
+@media screen and (max-width: 991px){
+	#login-main{ background-position-y: 10%!important;}
+}
+
+
+
+
+
+
+

@@ -22,5 +22,11 @@ module Iplt20
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    # For enabling additional path in assets.
+    config.assets.paths << "#{Rails.root}/app/assets/fonts"
+
+    
+    # config.autoload_paths += %W(#{config.root}/lib/modules)
   end
 end

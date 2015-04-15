@@ -1,26 +1,65 @@
-<h2>Log in</h2>
-
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <% if devise_mapping.rememberable? -%>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+  <div id="login-main" > 
+    <div class="container login-main">
+     <div class="user-img">
+      <!-- <img src="http://i58.tinypic.com/24yy8b7.png"  class="img-circle user-img img-thumbnail" alt=""> -->
+     <%= image_tag 'logo.jpg', class: "img-circle user-img img-thumbnail", alt:""  %>
     </div>
-  <% end -%>
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
+    <div class="col-md-4 login-form">
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name), class:"form-horizontal", role: "form") do |f| %>
+      <div class="form-group">
+        <%= f.text_field :email, class: "form-control login-field", value: "", placeholder: "b.senger", id:"login-name" %>
+        <label for="login-name" class="login-name"><i class="fa fa-envelope"></i></label>
+      </div>
+
+
+      <div class="form-group">
+        <%= f.password_field :password, autocomplete: "off", class: "form-control login-field", value: "", placeholder: "", id: "login-pass" %>
+        <label for="login-pass" class="login-pass"><i class="fa fa-lock"></i></label>
+      </div>
+
+      <div class="form-group">
+        <!-- <a class="btn btn-lg btn-block" href="#">Log in</a> -->
+        <%= f.submit "Log in",class: "btn btn-lg btn-block" %>
+      </div>
+
+      <% if devise_mapping.rememberable? -%>
+      <div class="form-group input-check" >
+        <%= f.check_box :remember_me, id: "remember-me", name: "remember-me", value:"", checked: true %>
+        <label for="remember-me"><span>Remember me</span></label>
+      </div>
+      <% end %>
+
+      <div class="form-group">
+       <label class="linkwdt" for="remember-me"><a class="login-link" href="#">Forgot Password? </a></label> 
+       <label class="linkwdt"for="remember-me"><span ><a class="login-link signuplink pull-right" href="javascript:void()">Sign Up </a></span></label> 
+     </div>
+     <% end %>
+   </div><!--login-form-->
+
+   <div class="col-md-4 signup-form">
+    <form class="form-horizontal" role="form">
+      <div class="form-group">
+        <input type="text" class="form-control login-field" value="" placeholder="First Name" id="login-name">
+
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control login-field" value="" placeholder="email" id="login-name">
+        <label for="email" class="signup-name"><i class="fa fa-envelope"></i></label>
+      </div>
+
+      <div class="form-group">
+        <input type="password" class="form-control login-field" value="" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;" id="login-pass" >
+        <label for="login-pass" class="signup-pass"><i class="fa fa-lock"></i></label>
+      </div>
+
+      <div class="form-group">
+        <a class="btn btn-lg btn-block" href="#">Sign Up</a>
+      </div>
+    </form>
   </div>
-<% end %>
 
-<%= render "devise/shared/links" %>
+</div><!--container-->
+</div><!--[END]login-main-->
+
+<%#= render "devise/shared/links" %>

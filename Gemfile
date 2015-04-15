@@ -46,3 +46,4 @@ end
 
 gem "therubyracer"
 gem 'devise'
+gem "font-awesome-rails"
