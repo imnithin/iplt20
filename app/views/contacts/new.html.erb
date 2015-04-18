@@ -1,0 +1,24 @@
+<h2>Sign up</h2>
+
+<%= form_for(User.new, url: create_contact_contacts_path) do |f| %>
+  <div class="field">
+    <%#= f.label :first_name %><br />
+    <%#= f.text_field :first_name, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%#= f.label :last_name %><br />
+    <%#= f.text_field :last_name, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, multiple: true %>
+    <%= f.email_field :email, multiple: true %>
+  </div>
+<%= f.hidden_field :group_id, value: params[:group_id] %>
+  <div class="actions">
+    <%= f.submit "Invite" %>
+  </div>
+<% end %>
+

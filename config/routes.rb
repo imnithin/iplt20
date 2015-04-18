@@ -4,6 +4,12 @@ Rails.application.routes.draw do
   resources :players
   resources :teams
   resources :groups
+  resources :contacts do 
+    collection do 
+      post "/contacts" => "contacts#create", :as => :create_contact
+    end
+  end
+
   get 'welcome/index'
   root 'welcome#index'
 
