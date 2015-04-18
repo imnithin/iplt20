@@ -5,4 +5,7 @@ class Group < ActiveRecord::Base
   has_many :users, through: :user_groups
   has_many :user_groups
   
+  def type
+    type_id ? "Batting" : "Bowling"
+  end
 end
