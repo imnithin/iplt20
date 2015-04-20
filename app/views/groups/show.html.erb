@@ -10,6 +10,17 @@
   <%= @group.type %>
 </p>
 
+
+
+<% for user in @group.users %>
+<%= user.email %><br/>
+<% end %>
+
+
+===========================
+
+
+
 <%= link_to 'Edit', edit_group_path(@group) %> |
 <%= link_to 'Back', groups_path %>
 <%= link_to "Invite User", new_contact_path(group_id: @group) %>

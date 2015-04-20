@@ -8,8 +8,7 @@ class ContactsController < ApplicationController
         @user = User.new(email: email)
         @user.password = Devise.friendly_token.first(8)
         if @user.save
-         user_group =  @user.user_groups.build(group_id: params[:group_id].to_i)
-         user_group.save!
+         @user.user_groups.build(group_id: params[:user][:group_id]).save
       # UserMailer.notify_user(@user).deliver
     else
 

@@ -1,2 +1,9 @@
 <h1>Welcome To The League</h1>
 
+<%= link_to "Add Groups", groups_path %><br/>
+
+Your groups
+
+<% for group in current_user.groups %>
+<%= link_to group.name, group_path(group.id) %>
+<% end %>

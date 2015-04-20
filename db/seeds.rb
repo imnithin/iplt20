@@ -1,6 +1,9 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #
+
+User.create(email: 'admin@ipl.com', password: 'admin@ipl.com', first_name: 'admin') unless User.any?
+
 unless Team.any?
   [["CSK",1], ["DD",2], ["KKR",3], ["KXIP",4], ["MI",5], ["RCB",6], ["RR",7], ["SRH",8]].each do |team, code|
     Team.create(name: team)
