@@ -1,0 +1,13 @@
+<br/>
+
+
+<% for match in @current_matches %>
+<%= match.first_team %>
+<%= match.second_team %>
+<% end %>
+
+<%= form_for @selection do |f| %>
+	<% (@current_matches).each_with_index do |match,i| %>
+	 <%= f.select("choice#{i+1}".to_sym, match.players_set_1, {:include_blank => 'Choose 1'},:class=>"class_name") %>
+	<% end %>
+	<% end %>

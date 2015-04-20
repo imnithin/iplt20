@@ -90,3 +90,6 @@ SRH_TEAM = %w(Shikhar Dhawan, David Warner,  Lokesh Rahul, Ricky Bhui, Kane Will
 SRH_TEAM.each do |player|
  Player.find_or_create_by(first_name: player.split.first, last_name: player.split.last, team_id: 8)
 end
+
+
+# Match.new(team1: 1, team2: 2, start_time: Date.today)

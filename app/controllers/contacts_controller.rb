@@ -14,7 +14,7 @@ class ContactsController < ApplicationController
 
     end
   end
-  redirect_to root_path
+  redirect_to group_path(id: params[:user][:group_id])
 end
 end
 
